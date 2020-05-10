@@ -5,7 +5,7 @@ public class GoogleSearchTest extends BaseClass {
     public void test1() {
         homePage = new SearchPage(driver);
         resultAllPage = homePage.search("сокиабле");
-        Assert.assertTrue(resultAllPage.getTitleFromFirstLink().contains("Сокиабле Сокіабле"));
+        Assert.assertTrue(resultAllPage.getTitleFromFirstLink().contains("Сокиабле"));
     }
 
     @Test
@@ -13,6 +13,6 @@ public class GoogleSearchTest extends BaseClass {
         homePage = new SearchPage(driver);
         resultAllPage = homePage.search("старичок, идем на пикничок!");
         videosPage = resultAllPage.navigationBlock().clickOnVideos();
-        Assert.assertTrue(videosPage.getTitleFromFirstLink().contains("Старичок, идем"));
+        Assert.assertTrue(videosPage.getTitleFromFirstLink().contains("Старичок"));
     }
 }

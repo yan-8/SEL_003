@@ -11,6 +11,6 @@ public class VideosPage {
     }
 
     public String getTitleFromFirstLink() {
-        return driver.findElement(By.xpath(".//div[@class = 'g'][1]//span[@class = 'st']")).getText();
+        return driver.findElement(By.xpath(".//div[@class = 'g'][1]//span[@class = 'st']/em")).getText();
     }
 }
